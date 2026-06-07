@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+select {
+  width: 250px;
+  height: 35px;
+}
+
+button {
+  padding: 8px 15px;
+}
+
+.small {
+  width: 70px;
+  height: 70px;
+}
+
+.medium {
+  width: 100px;
+  height: 100px;
+}
+
+.large {
+  width: 110px;
+  height: 110px;
+}
+
+.pro-pic-sharp {
+  border-radius: 0px;
+}
+
+.pro-pic-bordered {
+  border-radius: 55px;
+}
