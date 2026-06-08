@@ -1,25 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
-export class AppComponent {
-
-  selectedEdge = 'rounded';
-  selectedSize = 'medium';
-
-  edgeClass = 'pro-pic-bordered';
-  sizeClass = 'medium';
-
-  applyStyle() {
-
-    this.edgeClass =
-      this.selectedEdge === 'rounded'
-        ? 'pro-pic-bordered'
-        : 'pro-pic-sharp';
-
-    this.sizeClass = this.selectedSize;
-  }
-}
+export class AppComponent {}

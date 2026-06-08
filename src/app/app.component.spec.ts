@@ -1,29 +1,22 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
-  });
+import { User } from './user';
+import { UserService } from './user.service';
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
 
-  it(`should have the 'profile-pic-app' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('profile-pic-app');
-  });
+  users: User[] = [];
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, profile-pic-app');
-  });
-});
+  constructor(private userService: UserService) {
+    this.users = this.userService.getUsers();
+  }
+
+}

@@ -1,36 +1,21 @@
-.container {
-  text-align: center;
-  margin-top: 50px;
+h2 {
+  margin-left: 20px;
 }
 
-select {
-  width: 250px;
-  height: 35px;
+.users {
+  list-style-type: none;
+  width: 300px;
 }
 
-button {
-  padding: 8px 15px;
+.users li {
+  background-color: #eeeeee;
+  margin: 5px;
+  padding: 10px;
 }
 
-.small {
-  width: 70px;
-  height: 70px;
-}
-
-.medium {
-  width: 100px;
-  height: 100px;
-}
-
-.large {
-  width: 110px;
-  height: 110px;
-}
-
-.pro-pic-sharp {
-  border-radius: 0px;
-}
-
-.pro-pic-bordered {
-  border-radius: 55px;
+.badge {
+  background-color: #405061;
+  color: white;
+  padding: 8px;
+  margin-right: 10px;
 }

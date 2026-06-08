@@ -1,0 +1,23 @@
+<h2>Users Profile Details</h2>
+
+<div class="container">
+
+  <div
+    class="card"
+    *ngFor="let user of users">
+
+    <img
+      [src]="user.profileImage"
+      width="100">
+
+    <h3>{{user.name}}</h3>
+
+    <p>DOB : {{user.dateOfBirth}}</p>
+
+    <p>Phone : {{user.mobileNumber}}</p>
+
+    <p>Location : {{user.location}}</p>
+
+  </div>
+
+</div>
