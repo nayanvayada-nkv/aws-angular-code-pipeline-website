@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - npm install
+
+  build:
+    commands:
+      - npm install -g @angular/cli
+      - ng build --configuration production
+
+artifacts:
+  base-directory: dist/profile-pic-app
+  files:
+    - '**/*'
